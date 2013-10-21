@@ -1208,26 +1208,26 @@ form .pretty-radio.active {
  * SORTABLE GRID
  * =============================================================
  */
-.grid {
+.sortable-grid {
   display: none;
   float: left;
   margin: 0px 400px 0px 220px;
   zoom: 1;
 }
-.grid:before {
+.sortable-grid:before {
   display: table;
   content: "";
 }
-.grid:after {
+.sortable-grid:after {
   display: table;
   content: "";
   clear: both;
 }
-.grid.active {
+.sortable-grid.active {
   display: block;
 }
-.grid .box,
-.grid .sortable-placeholder {
+.sortable-grid .box,
+.sortable-grid .sortable-placeholder {
   float: left;
   width: 120px;
   height: 150px;
@@ -1237,7 +1237,7 @@ form .pretty-radio.active {
   padding: 0px 13px;
   margin: 0px 10px 10px 0px;
 }
-.grid .sortable-placeholder {
+.sortable-grid .sortable-placeholder {
   background: none;
   border: 1px dashed #eeeeee;
 }
@@ -1302,6 +1302,65 @@ form .pretty-radio.active {
 }
 .sortable-list.ports > li.active a {
   background: #f8f8f8;
+}
+/* 
+ * =============================================================
+ * SORTABLE MOD
+ * =============================================================
+ */
+.sortable-grid-mod {
+  display: none;
+  float: left;
+  margin: 0px 400px 0px 220px;
+  zoom: 1;
+}
+.sortable-grid-mod:before {
+  display: table;
+  content: "";
+}
+.sortable-grid-mod:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.sortable-grid-mod.active {
+  display: block;
+}
+.sortable-grid-mod .box .inner {
+  margin: 33px 33px;
+  background: #ffffff;
+  width: 230px;
+  height: 228px;
+}
+.sortable-grid-mod .box,
+.sortable-grid-mod .sortable-placeholder {
+  float: left;
+  width: 298px;
+  height: 298px;
+  text-align: center;
+  background: #eeeeee;
+  border: 1px solid #eeeeee;
+  padding: 0px;
+}
+.sortable-grid-mod .sortable-placeholder {
+  background: none;
+  border: 1px dashed #eeeeee;
+}
+.sidebars-wrap {
+  position: relative;
+}
+.sidebar {
+  position: absolute;
+}
+.sidebar.left {
+  top: 0px;
+  left: 0px;
+  width: 200px;
+}
+.sidebar.right {
+  top: 0px;
+  right: 0px;
+  width: 400px;
 }
 /* 
  * =============================================================

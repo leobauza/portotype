@@ -21,7 +21,7 @@
 		$(function() {
 
 			//sortable grid
-			$( ".sortable" ).sortable(
+			$( ".sortable-grid" ).sortable(
 				{ //options
 					placeholder: "sortable-placeholder"
 				},
@@ -32,10 +32,37 @@
 					update: function(event, ui) {
 						var port_id = $(this).attr('id');
 					
-						var sortedIDs = $( ".sortable" ).sortable( "toArray", { attribute: "id" }  );
+						var sortedIDs = $( ".sortable-grid" ).sortable( "toArray", { attribute: "id" }  );
 						console.log(sortedIDs);
 				
-						var sorted = $( ".sortable" ).sortable( "serialize", { key: port_id } );
+						var sorted = $( ".sortable-grid" ).sortable( "serialize", { key: port_id } );
+						console.log(sorted);
+				
+					},
+					stop: function( event, ui ) {
+						$('body, html').removeClass('is-sorting');
+					}
+				}
+			).disableSelection();
+		
+		
+			//sortable grid mod
+			$( ".sortable-grid-mod" ).sortable(
+				{ //options
+					placeholder: "sortable-placeholder",
+					handle: ".inner"
+				},
+				{ //events
+					start: function( event, ui ) {
+						$('body, html').addClass('is-sorting');
+					},
+					update: function(event, ui) {
+						var port_id = $(this).attr('id');
+					
+						var sortedIDs = $( ".sortable-grid-mod" ).sortable( "toArray", { attribute: "id" }  );
+						console.log(sortedIDs);
+				
+						var sorted = $( ".sortable-grid-mod" ).sortable( "serialize", { key: port_id } );
 						console.log(sorted);
 				
 					},
@@ -45,12 +72,11 @@
 				}
 			).disableSelection();
 
-			$('.sortable .box a').click(function(e){
-				console.log('inside click');
-				e.preventDefault();
-			})
-		
 		});
+		
+		
+		
+		
 	</script>
 
 
@@ -64,7 +90,7 @@
 				$port = $data.port;
 				
 				//show the right port
-				$('.sortable.grid.active').removeClass('active');
+				$('.sortable-grid.active').removeClass('active');
 				$('#' + $port).addClass('active');
 				
 				//highlight this

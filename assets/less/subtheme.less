@@ -4,7 +4,7 @@
  * SORTABLE GRID
  * =============================================================
  */
-	.grid {
+	.sortable-grid {
 		display:none;
 		float:left;
 		margin:0px 400px 0px 220px;
@@ -102,6 +102,57 @@
 	}
 }
 
+/* 
+ * =============================================================
+ * SORTABLE MOD
+ * =============================================================
+ */
+	.sortable-grid-mod {
+		display:none;
+		float:left;
+		margin:0px 400px 0px 220px;
+		.group();
+		&.active {
+			display:block;
+		}
+		.box {
+			.inner {
+				margin:33px 33px;
+				background:@white;
+				.square(230px,228px);
+			}
+		}
+		.box, .sortable-placeholder {
+			float:left;
+			.square(298px,298px);
+			text-align:center;
+			background:@lighter-grey;
+			border:1px solid @lighter-grey;
+			padding:0px;
+		}
+		.sortable-placeholder {
+			background:none;
+			border:1px dashed @lighter-grey;
+		}
+	}
+
+	.sidebars-wrap {
+		position:relative;
+	}
+
+	.sidebar {
+		position:absolute;
+		&.left {
+			top:0px;
+			left:0px;
+			width:200px;
+		}
+		&.right {
+			top:0px;
+			right:0px;
+			width:400px;
+		}
+	}
 
 
 /* 
