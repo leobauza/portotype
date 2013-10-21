@@ -1332,6 +1332,10 @@ form .pretty-radio.active {
   width: 230px;
   height: 228px;
 }
+.sortable-grid-mod .box.ui-sortable-helper {
+  background: none;
+  border: 1px solid transparent;
+}
 .sortable-grid-mod .box,
 .sortable-grid-mod .sortable-placeholder {
   float: left;
@@ -1343,7 +1347,7 @@ form .pretty-radio.active {
   padding: 0px;
 }
 .sortable-grid-mod .sortable-placeholder {
-  background: none;
+  background: #e1e1e1;
   border: 1px dashed #eeeeee;
 }
 .sidebars-wrap {

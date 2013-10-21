@@ -121,6 +121,10 @@
 				background:@white;
 				.square(230px,228px);
 			}
+			&.ui-sortable-helper {
+				background:none;
+				border:1px solid transparent;
+			}
 		}
 		.box, .sortable-placeholder {
 			float:left;
@@ -131,7 +135,7 @@
 			padding:0px;
 		}
 		.sortable-placeholder {
-			background:none;
+			background:darken(@lighter-grey, 5%);
 			border:1px dashed @lighter-grey;
 		}
 	}
