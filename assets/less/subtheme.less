@@ -1,0 +1,120 @@
+//if this isn't empty except for the @media when you transfer it over you did it wrong
+/* 
+ * =============================================================
+ * SORTABLE GRID
+ * =============================================================
+ */
+	.grid {
+		float:left;
+		margin:0px 400px 0px 220px;
+		.group();
+		.box, .sortable-placeholder {
+			float:left;
+			.square(120px,150px);
+			text-align:center;
+			background:@lighter-grey;
+			border:1px solid @lighter-grey;
+			padding:0px 13px;
+			margin:0px 10px 10px 0px;
+		}
+		.sortable-placeholder {
+			background:none;
+			border:1px dashed @lighter-grey;
+		}
+	}
+
+	.sidebars-wrap {
+		position:relative;
+	}
+
+	.sidebar {
+		position:absolute;
+		&.left {
+			top:0px;
+			left:0px;
+			width:200px;
+		}
+		&.right {
+			top:0px;
+			right:0px;
+			width:400px;
+		}
+	}
+
+/* 
+ * =============================================================
+ * SORTABLE MENU
+ * =============================================================
+ */
+.sortable-list {
+	.reset-list();
+	li {
+		margin:0;
+		a {
+			display:block;
+			padding:10px;
+			font-weight:bold;
+			&:hover {
+				text-decoration:none;
+			}
+		}
+		&.sortable-placeholder {
+
+		}
+	}
+	&.categories {
+		&> li {
+			&> a {
+				background:@black;
+				color:@white;
+				font-size:1.6em;
+			}
+		}
+	}
+	&.ports {
+		&> li {
+			&> a {
+				background:@lighter-grey;
+				color:@text;
+				font-size:1.4em;
+			}
+		}
+	}
+}
+
+
+
+/* 
+ * =============================================================
+ * GENERAL RESPONSIVENESS
+ * =============================================================
+ */
+@media (max-width: 959px) {
+	
+	
+	/*margin right instead of margin left to do overflow hidden*/
+	[class*="row-fluid"] > [class*="span"] {
+		float:none;
+		width:auto;
+		margin-right: 0;
+	}
+
+	/*Use this to set exact percentages and have the last box be ok*/
+	[class*="row-fluid"] > [class*="span"]:last-child {
+		overflow:auto;
+	}
+	
+	
+}
+
+@media only screen and (device-width: 768px) {
+  /* For general iPad layouts */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
+}
