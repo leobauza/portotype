@@ -8,21 +8,21 @@
 			<li>
 				<a href="#">category one</a>
 				<ul class="sortable-list ports">
-					<li><a href="#">port one</a></li>
-					<li><a href="#">port two</a></li>
-					<li><a href="#">port three</a></li>
+					<li data-port="port-1" class="active"><a href="#">port one <span class="erase">x</span></a></li>
+					<li data-port="port-2"><a href="#">port two <span class="erase">x</span></a></li>
+					<li><a href="#">port three <span class="erase">x</span></a></li>
 				</ul>
 			</li>
 			<li>
 				<a href="#">category two</a>
 				<ul class="sortable-list ports">
-					<li><a href="#">auto created port</a></li>
+					<li><a href="#">auto created port <span class="erase">x</span></a></li>
 				</ul>
 			</li>
 		</ul>
 	</aside>
 
-	<article id="port-1" class="sortable grid">
+	<article id="port-1" class="sortable grid active">
 		<div id="ser_1" class="box">Item 1 <a href="#">don't propagate</a></div>
 		<div id="ser_2" class="box">Item 2</div>
 		<div id="ser_3" class="box">Item 3</div>
@@ -37,6 +37,24 @@
 		<div id="ser_12" class="box">Item 12</div>
 		<div id="ser_13" class="box">Item 13</div>
 	</article>
+
+
+	<article id="port-2" class="sortable grid">
+		<div id="ser_1" class="box">Item 1/2 <a href="#">don't propagate</a></div>
+		<div id="ser_2" class="box">Item 2/2</div>
+		<div id="ser_3" class="box">Item 3/2</div>
+		<div id="ser_4" class="box">Item 4/2</div>
+		<div id="ser_5" class="box">Item 5/2</div>
+		<div id="ser_6" class="box">Item 6/2</div>
+		<div id="ser_7" class="box">Item 7/2</div>
+		<div id="ser_8" class="box">Item 8/2</div>
+		<div id="ser_9" class="box">Item 9/2</div>
+		<div id="ser_10" class="box">Item 10/2</div>
+		<div id="ser_11" class="box">Item 11/2</div>
+		<div id="ser_12" class="box">Item 12/2</div>
+		<div id="ser_13" class="box">Item 13/2</div>
+	</article>
+
 
 	<aside class="sidebar right">
 		second sidebar

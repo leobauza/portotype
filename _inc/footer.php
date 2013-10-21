@@ -20,6 +20,7 @@
 	<script>
 		$(function() {
 
+			//sortable grid
 			$( ".sortable" ).sortable(
 				{ //options
 					placeholder: "sortable-placeholder"
@@ -56,6 +57,30 @@
 	<script>
 		$(function() {
 			
+			//select a different port
+			$('.sortable-list.ports').on('click', 'li', function(e){
+				
+				$data = $(this).data();
+				$port = $data.port;
+				
+				//show the right port
+				$('.sortable.grid.active').removeClass('active');
+				$('#' + $port).addClass('active');
+				
+				//highlight this
+				$('.sortable-list .active').removeClass('active');
+				$(this).addClass('active');
+				
+				e.preventDefault();
+			});
+			
+			//remove list item
+			$('.sortable-list').on('click', '.erase', function(e){
+				$(this).closest('li').remove();
+				e.preventDefault();
+			});
+			
+			//turn copy mode on and off
 			$('.copy-mode').click(function(e){
 
 				var $data = $(this).data();

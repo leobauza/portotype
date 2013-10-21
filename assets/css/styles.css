@@ -1209,6 +1209,7 @@ form .pretty-radio.active {
  * =============================================================
  */
 .grid {
+  display: none;
   float: left;
   margin: 0px 400px 0px 220px;
   zoom: 1;
@@ -1221,6 +1222,9 @@ form .pretty-radio.active {
   display: table;
   content: "";
   clear: both;
+}
+.grid.active {
+  display: block;
 }
 .grid .box,
 .grid .sortable-placeholder {
@@ -1268,12 +1272,23 @@ form .pretty-radio.active {
   margin: 0;
 }
 .sortable-list li a {
+  position: relative;
   display: block;
   padding: 10px;
   font-weight: bold;
 }
 .sortable-list li a:hover {
   text-decoration: none;
+}
+.sortable-list li a .erase {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: #666666;
+  color: #ffffff;
+  height: 100%;
+  width: 20px;
+  text-align: center;
 }
 .sortable-list.categories > li > a {
   background: #000000;
@@ -1284,6 +1299,9 @@ form .pretty-radio.active {
   background: #eeeeee;
   color: #666666;
   font-size: 1.4em;
+}
+.sortable-list.ports > li.active a {
+  background: #f8f8f8;
 }
 /* 
  * =============================================================

@@ -5,9 +5,13 @@
  * =============================================================
  */
 	.grid {
+		display:none;
 		float:left;
 		margin:0px 400px 0px 220px;
 		.group();
+		&.active {
+			display:block;
+		}
 		.box, .sortable-placeholder {
 			float:left;
 			.square(120px,150px);
@@ -51,11 +55,22 @@
 	li {
 		margin:0;
 		a {
+			position:relative;
 			display:block;
 			padding:10px;
 			font-weight:bold;
 			&:hover {
 				text-decoration:none;
+			}
+			.erase {
+				position:absolute;
+				top:0px;
+				right:0px;
+				background:@grey;
+				color:@white;
+				height:100%;
+				width:20px;
+				text-align:center;
 			}
 		}
 		&.sortable-placeholder {
@@ -77,6 +92,11 @@
 				background:@lighter-grey;
 				color:@text;
 				font-size:1.4em;
+			}
+			&.active {
+				a {
+					background:lighten(@lighter-grey, 4%);
+				}
 			}
 		}
 	}
