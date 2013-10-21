@@ -20,7 +20,7 @@
 </head>
 
 <body>
-	<header class="site-header container">
+	<header class="site-header">
 		<h1>Portotype</h1>
 	</header>
 

@@ -1,6 +1,74 @@
 //if this isn't empty except for the @media when you transfer it over you did it wrong
 /* 
  * =============================================================
+ * SCROLLBAR
+ * =============================================================
+ */
+body {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0px;
+
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+html {
+	overflow-y:auto;
+	background-color:transparent;
+}
+::-webkit-scrollbar {
+	width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	//border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+	//border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+
+/* 
+ * =============================================================
+ * STRUCTURE
+ * =============================================================
+ */
+.site-header {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	padding:20px 0px;
+	background:@white;
+	z-index:500;
+}
+
+.sidebars-wrap {
+	position:relative;
+}
+
+.sidebar {
+	top:120px;
+	&.left {
+		position:fixed;
+		overflow:auto;
+		left:0px;
+		width:200px;
+	}
+	&.right {
+		position:absolute;
+		right:12px;
+		width:400px;
+	}
+}
+
+/* 
+ * =============================================================
  * SORTABLE GRID
  * =============================================================
  */
@@ -24,24 +92,6 @@
 		.sortable-placeholder {
 			background:none;
 			border:1px dashed @lighter-grey;
-		}
-	}
-
-	.sidebars-wrap {
-		position:relative;
-	}
-
-	.sidebar {
-		position:absolute;
-		&.left {
-			top:0px;
-			left:0px;
-			width:200px;
-		}
-		&.right {
-			top:0px;
-			right:0px;
-			width:400px;
 		}
 	}
 
@@ -108,9 +158,10 @@
  * =============================================================
  */
 	.sortable-grid-mod {
+		overflow:auto;
 		display:none;
 		float:left;
-		margin:0px 400px 0px 220px;
+		margin:120px 400px 0px 220px;
 		.group();
 		&.active {
 			display:block;
@@ -119,7 +170,7 @@
 			.inner {
 				margin:33px 33px;
 				background:@white;
-				.square(230px,228px);
+				.square(130px,128px);
 			}
 			&.ui-sortable-helper {
 				background:none;
@@ -128,7 +179,7 @@
 		}
 		.box, .sortable-placeholder {
 			float:left;
-			.square(298px,298px);
+			.square(198px,198px);
 			text-align:center;
 			background:darken(@lighter-grey, 10%);
 			border:1px solid @lighter-grey;
@@ -137,24 +188,6 @@
 		.sortable-placeholder {
 			background:darken(@lighter-grey, 5%);
 			border:1px dashed @lighter-grey;
-		}
-	}
-
-	.sidebars-wrap {
-		position:relative;
-	}
-
-	.sidebar {
-		position:absolute;
-		&.left {
-			top:0px;
-			left:0px;
-			width:200px;
-		}
-		&.right {
-			top:0px;
-			right:0px;
-			width:400px;
 		}
 	}
 

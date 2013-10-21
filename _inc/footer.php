@@ -1,8 +1,3 @@
-	<footer class="site-footer container">
-		a footer
-	</footer>
-
-
 	<!-- jquery libs -->
 	<script src="../assets/js/jquery-1.9.1.js"></script>
 	<script src="../assets/js/jquery-migrate--1.2.1.js"></script>
@@ -12,6 +7,10 @@
 
 	<!-- sortable -->
 	<script src="../assets/js/jquery-ui-1.10.3.custom.js"></script>
+
+
+
+
 
 	<!-- initial and project scripts -->
 	<script src="../assets/js/initial.js"></script> 
@@ -90,7 +89,7 @@
 				$port = $data.port;
 				
 				//show the right port
-				$('.sortable-grid.active').removeClass('active');
+				$('.sortable-grid-mod.active').removeClass('active');
 				$('#' + $port).addClass('active');
 				
 				//highlight this
@@ -165,5 +164,10 @@
 	</script>
 
 
+	<script>
+	
+		$('.sidebar, .sortable-grid-mod').height($(window).height() - 120);
+	
+	</script>
 </body>
 </html>
